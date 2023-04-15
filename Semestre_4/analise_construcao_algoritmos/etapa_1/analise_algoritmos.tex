@@ -1,0 +1,41 @@
+Análise de Algoritmos
+
+Analisar um algoritmo nos remete, assim como qualquer processo, prever os recursos de que o algoritmo necessita. 
+Ocasionalmente, recursos como memória, largura de banga de comunicação ou hardware de computador são a principal 
+preocupação, porém mais frequentemente é o tempo de computação que desejamos medir. 
+Antes de analisar um algoritmo, deve-se ter um modelo de tecnologia de implementação que será usada, no qual será
+analisado o poder processamento do hardware, e para todo os modelos serão usado em Single Thread, que acontecerá
+de apenas 1 processo por vez, sem operações paralelas.
+
+\subsection{Análise da ordenação por inserção}
+
+Insertion-Sort depende muito da entrada, para o tempo do processo, ou seja, ordenar mil números demora mais que 
+ordernar três números por exemplo. Além disso, até mesmo para entradas de tamanhos idênticos, o algoritmo do 
+Insertion-Sort pode ser mais lento do que uma entrada que já esteja pouco ordenada.
+
+\subsubsection{Tamanho de entrada}
+
+Um tópico importante é o tamanho da entrada, que depende muito do problema que estamos analisando, que pode ser
+feito por meio de cálculo de transformações discretas de Fourier, tem-se que a medida mais natural é o número de
+itens na entrada. Podemos escolher algumas formas de entrada, como vemos  na multiplicação entre dois inteiros,
+a melhor medida do tamanho da entrada é o número total de bits necessários para representar a entrada da notação
+binaria comum. Muitas vezes é melhor escolher o tamanho da entrada com dois números ao invés de um.
+
+\subsubsection{Tempo de execução}
+
+Podemos chamar o tempo de execução de um algoritmo em determinada entrada como sendo o número de passos executa-
+dos no processo.
+
+\subsection{Análise do pior caso e do caso médio}
+
+Na ordenação por inserção, visualizamos ambos melhor e pior caso, onde o arranjo já esteja ordenado e quando o arranjo está completamente invertido, respectivamente. Porém, para coveniência do estudos, Cormem associa em sua literatura apenas a aplicação para casos piores e médio, onde temos tempos maiores para qualquer entrada de tamanho n, e o porquê disso:
+
+- Conhecer o limite superior do tempo de execução na execução de pior caso nos dará uma garantia que nunca demorará mais do que esse tempo descrito, logo, não precisará fazer nenhuma suposição esperando que seja pior.
+
+- A frequência do pior caso é muito mais garantida que do caso médio e melhor, onde podemos analisar a ordenação de várias colunas de uma tabela em um banco de dados, onde tempos que para cada parâmetro, a ordenação terá um tamanho de entrada diferente, se comportando de formas diferentes na ordenação. Para não extender mais, sabemos que as chaves primárias são, em 99% dos casos, seriais, ou seja,ordenadas e de espaço n+1 do número anterior; porém os outros dados estão ordenados de formas aleatórias de forma que o parâmetro respeitado está sendo o ID.
+
+- Muitas vezes, casos médios são tão ruins quanto casos piores. Logo, em apenas casos específicos, será interessante usar caso médio, como análise probabilística, do qual podemos imaginar a curva de Gauss.
+
+\subsection{Ordem de crescimento}
+
+Também conhecida como a taxa de crescimento, consideramos apenas o termo inicial de uma fórmula, pois os termos de menor ordem são relativamente insigficantes diantes do termo de maior ordem. Em geral, um algoritmo de pior caso é mais eficiente que outro quando sua ordem de crescimento é melhor que o de comparação. 
